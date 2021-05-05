@@ -1,12 +1,9 @@
 h1 {
   margin-bottom: 25px;
   text-align: center;
-}
-@media (max-width: 414px) {
-  h1 {
+	
+  @media (max-width: 414px) {
     font-size: 21px;
     margin-bottom: 15px;
   }
 }
-
-/*# sourceMappingURL=Header.css.map */

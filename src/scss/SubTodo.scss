@@ -1,0 +1,46 @@
+$border-color: #f1f1f2;
+
+.sub-todo {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 0 15px;
+  border: 1px solid $border-color;
+  border-top: none;
+  background-color: white;
+  transition: 0.7s;
+  margin-left: 60px;
+  .bttn {
+    width: 1.8em;
+    height: 1.8em;
+  }
+  > .todo__delete-bttn {
+    opacity: 0;
+  }
+  &:hover > .todo__delete-bttn {
+    opacity: 1;
+  }
+  .label__check {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  i.icon {
+    font-size: calc(0.6rem + 0.7vw);
+    line-height: 1.4;
+    padding-left: 1px;
+  }
+  &.finished > .sub-todo__text {
+    color: lightgray;
+  }
+  &__text {
+    margin-bottom: 0;
+    line-height: 30px;
+    font-size: 15px;
+    font-family: inherit;
+    flex: 1;
+    cursor: pointer;
+    padding-bottom: 2px;
+    border: none;
+    transition: color 0.7s;
+  }
+}

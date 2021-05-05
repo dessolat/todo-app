@@ -1,0 +1,39 @@
+$border-color: #f1f1f2;
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  align-items: center;
+  padding: 0 15px;
+  border: 1px solid $border-color;
+  background-color: white;
+  &:hover > .bttn {
+    opacity: 1;
+  }
+  &.finished > .todo__text {
+    color: lightgray;
+  }
+  &__text {
+    margin-right: auto;
+    margin-bottom: 0;
+    line-height: 52px;
+    font-size: 18px;
+    flex: 1;
+    cursor: pointer;
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    transition: color 0.7s;
+  }
+  &__delete-bttn,
+  &__add-sub-bttn {
+    opacity: 0;
+  }
+  &__delete-bttn:hover {
+    animation: delete 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  }
+  &__add-sub-bttn:hover {
+    animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  }
+}

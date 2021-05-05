@@ -1,52 +1,48 @@
+$bgcheck: #00d478;
+
 .empty-todo-warning {
   position: relative;
   padding-top: 250px;
   font-size: 25px;
   text-align: center;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -114px;
+    transform: translateX(-50%) rotate(39deg);
+    background-image: url('../images/wing.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 75px;
+    height: 79px;
+  }
 }
-.empty-todo-warning::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -114px;
-  transform: translateX(-50%) rotate(39deg);
-  background-image: url("../images/wing.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 75px;
-  height: 79px;
-}
-
 .wrapper {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 15px;
-}
-@media (max-width: 414px) {
-  .wrapper {
+
+  @media (max-width: 414px) {
     margin-top: 15px;
   }
 }
-
 .bttn {
   width: 2.3em;
   height: 2.3em;
   border: none;
 }
-
 .label__checkbox {
   display: none;
+  &:checked + .label__check {
+    animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  }
 }
-.label__checkbox:checked + .label__check {
-  animation: check 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
-}
-
 .label__check {
   width: 2em;
   height: 2em;
 }
-
 .label__check,
 .bttn {
   display: inline-block;
@@ -59,7 +55,6 @@
   justify-content: center;
   transition: border 0.3s ease;
 }
-
 i.icon {
   opacity: 0.2;
   font-size: calc(0.6rem + 1vw);
@@ -67,18 +62,14 @@ i.icon {
   transition: opacity 0.3s 0.1s ease;
   -webkit-text-stroke: 3px rgba(0, 0, 0, 0.5);
 }
-
 .label__check i.icon,
 .todo__add-sub-bttn i.icon {
   padding-top: 2px;
-}
-@media (max-width: 1480px) {
-  .label__check i.icon,
-.todo__add-sub-bttn i.icon {
+
+  @media (max-width: 1480px) {
     padding-top: 0;
   }
 }
-
 .label__checkbox:checked + .label__check .icon,
 .bttn:hover .icon {
   opacity: 1;
@@ -98,6 +89,7 @@ i.icon {
     transform: scale(1);
   }
 }
+
 @keyframes check {
   10% {
     opacity: 0.1;
@@ -108,11 +100,11 @@ i.icon {
     background: rgba(0, 0, 0, 0.1);
   }
   50% {
-    background: #00d478;
+    background: $bgcheck;
     opacity: 0.6;
   }
   100% {
-    background: #00d478;
+    background: $bgcheck;
     opacity: 1;
   }
 }
@@ -126,13 +118,11 @@ i.icon {
     background: rgba(0, 0, 0, 0.1);
   }
   50% {
-    background: #ff420e;
+    background: rgb(255, 66, 14);
     opacity: 0.6;
   }
   100% {
-    background: #ff420e;
+    background: rgb(255, 66, 14);
     opacity: 1;
   }
 }
-
-/*# sourceMappingURL=App.css.map */

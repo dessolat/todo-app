@@ -1,6 +1,10 @@
-ul {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-bottom: 75px;
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 2px;
+  margin-bottom: 75px;
+  list-style: none;
 }
+
+/*# sourceMappingURL=todolist.css.map */
